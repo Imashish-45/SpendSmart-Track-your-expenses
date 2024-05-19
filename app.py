@@ -9,7 +9,7 @@ def index():
 @app.route('/add_expense', methods=['GET', 'POST'])
 def add_expense():
     if request.method == 'POST':
-        # Handle form submission and add expense
+        # will Handle form submission and add expense
 
         
         
