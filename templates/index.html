@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1>Expense Tracker</h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="{{ url_for('add_expense') }}">Add Expense</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Welcome to Expense Tracker</h2>
+            <p>Keep track of your expenses and manage your finances effectively.</p>
+            <a href="{{ url_for('add_expense') }}" class="btn">Add Expense</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Expense Tracker. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
