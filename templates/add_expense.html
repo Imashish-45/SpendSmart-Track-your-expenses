@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Expense</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -21,11 +24,19 @@
 
     <main>
         <div class="container">
-            <h2>Add Expense</h2>
+            <h2>Please Enter your Expense here!</h2>
             <form action="{{ url_for('add_expense') }}" method="post">
                 <div class="form-group">
                     <label for="type">Type:</label>
-                    <input type="text" id="type" name="type" required>
+                    <div class="custom-select">
+                        <select id="type" name="type" required>
+                            <option value="">Select Type</option>
+                            <option value="">Needs</option>
+                            <option value="transportation">Wants</option>
+                            <option value="entertainment">Miscelleneous</option>
+
+                        </select>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="amount">Amount:</label>
